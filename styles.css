@@ -1,0 +1,364 @@
+/* Cozy Corner - Custom Design Styles */
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Custom Serif Enhancements */
+h1, h2, h3, .font-serif {
+  letter-spacing: -0.02em;
+}
+
+/* Subtle Zoom Animation for Hero Image */
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1.02);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-subtle-zoom {
+  animation: subtleZoom 25s ease-in-out infinite alternate;
+}
+
+/* Modal In Animation */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-in {
+  animation: modalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Clean Date Picker styling across browsers */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  cursor: pointer;
+  filter: invert(0.2);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Custom scrollbar for dropdowns */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D4CB;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B2A6;
+}
+
+/* Card hover transitions */
+.property-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+}
+
+.amenity-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Wishlist heart active state */
+.wishlist-btn.active svg {
+  fill: #E11D48;
+  stroke: #E11D48;
+}
+
+/* =========================================================
+   DARK MODE COMPREHENSIVE CONTRAST & ACCESSIBILITY STYLING
+   ========================================================= */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #101411 !important;
+  color: #ECE8E1 !important;
+}
+
+html.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.9);
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #151A17;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2E3831;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3E4B42;
+}
+
+/* Universal high contrast headings & text in dark mode */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-brand-charcoal {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-brand-warmGrey {
+  color: #B5B0A6 !important;
+}
+
+/* Surface backgrounds in dark mode */
+html.dark #mainHeader {
+  background-color: rgba(18, 24, 19, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #services {
+  background-color: #121714 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #services > div > p {
+  color: #C5C0B6 !important;
+}
+
+html.dark .amenity-card {
+  background-color: #171E19 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+html.dark .amenity-card h3 {
+  color: #FFFFFF !important;
+}
+
+html.dark .amenity-card p {
+  color: #C5C0B6 !important;
+}
+
+html.dark .amenity-card .bg-brand-sand {
+  background-color: #222C24 !important;
+  color: #6EE7B7 !important;
+}
+
+/* Testimonials section high contrast */
+html.dark #reviews > div {
+  background-color: #171E19 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #reviews h2 {
+  color: #FFFFFF !important;
+}
+
+html.dark #reviews svg {
+  color: #6EE7B7 !important;
+}
+
+html.dark #testimonialQuote {
+  color: #F5F2EB !important;
+}
+
+html.dark #testimonialAuthor {
+  color: #FFFFFF !important;
+}
+
+html.dark #testimonialRole {
+  color: #B5B0A6 !important;
+}
+
+html.dark #reviews button {
+  background-color: #222C24 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #reviews button:hover {
+  background-color: #2E3B30 !important;
+}
+
+/* Property cards contrast */
+html.dark .property-card {
+  background-color: #171E19 !important;
+  border-color: rgba(255, 255, 255, 0.09) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .property-card h3 {
+  color: #FFFFFF !important;
+}
+
+html.dark .property-card p {
+  color: #B5B0A6 !important;
+}
+
+html.dark .property-card span.text-base {
+  color: #FFFFFF !important;
+}
+
+html.dark .property-card span.text-xs {
+  color: #B5B0A6 !important;
+}
+
+html.dark .bg-brand-sageTag {
+  background-color: #222F25 !important;
+  color: #A3E4B5 !important;
+}
+
+/* Search bar and dropdowns contrast */
+html.dark #searchForm input,
+html.dark #searchForm span {
+  color: #FFFFFF !important;
+}
+
+html.dark #searchForm label {
+  color: #C5C0B6 !important;
+}
+
+html.dark #destinationDropdown,
+html.dark #guestDropdown {
+  background-color: #19221B !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #destinationDropdown button,
+html.dark #guestDropdown button {
+  color: #FFFFFF !important;
+}
+
+html.dark #destinationDropdown button:hover,
+html.dark #guestDropdown button:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Footer contrast */
+html.dark footer {
+  background-color: #0E1210 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark footer h4 {
+  color: #FFFFFF !important;
+}
+
+html.dark footer p,
+html.dark footer a,
+html.dark footer li,
+html.dark footer span {
+  color: #B5B0A6 !important;
+}
+
+html.dark footer a:hover {
+  color: #FFFFFF !important;
+}
+
+html.dark #newsletterEmail {
+  background-color: #171E19 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #newsletterEmail::placeholder {
+  color: #8C877D !important;
+}
+
+/* Modal contrast */
+html.dark #propertyModal > div {
+  background-color: #171E19 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #propertyModal p {
+  color: #D6D2CA !important;
+}
+
+html.dark #propertyModal span {
+  color: #E5E1D8;
+}
+
+html.dark #propertyModal #modalTitle,
+html.dark #propertyModal #modalPrice {
+  color: #FFFFFF !important;
+}
+
+html.dark #propertyModal input[type="date"] {
+  background-color: #212B24 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #propertyModal .bg-brand-sand\/50 {
+  background-color: #121714 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #propertyModal #calcTotal {
+  color: #6EE7B7 !important;
+}
+
+/* Subtle spin on sun icon when toggling */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
