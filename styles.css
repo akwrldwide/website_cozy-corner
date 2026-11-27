@@ -316,37 +316,73 @@ html.dark #newsletterEmail::placeholder {
 
 /* Modal contrast */
 html.dark #propertyModal > div {
-  background-color: #171E19 !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
+  background-color: #161D18 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
   color: #FFFFFF !important;
 }
 
-html.dark #propertyModal p {
+html.dark #modalBadge {
+  background-color: #1C251F !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+html.dark #modalBadge span {
+  color: #FFFFFF !important;
+}
+
+html.dark #modalDescription {
   color: #D6D2CA !important;
 }
 
-html.dark #propertyModal span {
-  color: #E5E1D8;
+html.dark #modalLocation {
+  color: #A8A399 !important;
 }
 
-html.dark #propertyModal #modalTitle,
-html.dark #propertyModal #modalPrice {
-  color: #FFFFFF !important;
-}
-
-html.dark #propertyModal input[type="date"] {
-  background-color: #212B24 !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
-  color: #FFFFFF !important;
+html.dark #propertyModal .bg-brand-sand {
+  background-color: #212B23 !important;
+  color: #E2DDD5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 html.dark #propertyModal .bg-brand-sand\/50 {
   background-color: #121714 !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark #propertyModal label {
+  color: #D6D2CA !important;
+  opacity: 1 !important;
+}
+
+html.dark #propertyModal input[type="date"] {
+  background-color: #1E2721 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+  color-scheme: dark !important;
+}
+
+html.dark #propertyModal .text-brand-warmGrey {
+  color: #BDB8AE !important;
+}
+
+html.dark #propertyModal #calcSubtotal,
+html.dark #propertyModal #calcTotal,
+html.dark #propertyModal span.font-medium {
+  color: #FFFFFF !important;
 }
 
 html.dark #propertyModal #calcTotal {
   color: #6EE7B7 !important;
+}
+
+html.dark #propertyModal button[onclick="confirmBooking()"] {
+  background-color: #059669 !important;
+  color: #FFFFFF !important;
+}
+
+html.dark #propertyModal button[onclick="confirmBooking()"]:hover {
+  background-color: #10B981 !important;
 }
 
 /* Subtle spin on sun icon when toggling */

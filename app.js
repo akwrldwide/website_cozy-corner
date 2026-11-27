@@ -292,7 +292,7 @@ function openPropertyModal(id) {
   if (title) title.textContent = data.title;
   if (loc) loc.innerHTML = `📍 ${data.city} &bull; Verified Host`;
   if (price) price.textContent = `$${data.price}`;
-  if (badge) badge.textContent = `★ ${data.rating}`;
+  if (badge) badge.innerHTML = `<span class="text-amber-400 font-bold">★</span> <span class="font-medium">${data.rating}</span>`;
   if (desc) desc.textContent = data.description;
 
   updateModalPrice();
